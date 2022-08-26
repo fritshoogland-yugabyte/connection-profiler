@@ -1,0 +1,14 @@
+[package]
+name = "connection-profiler"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+postgres = "0.19.2"
+structopt = "0.3.26"
+
+[patch.crates-io]
+postgres-protocol = { path = "rust-postgres/postgres-protocol"}
+tokio-postgres = { path = "rust-postgres/tokio-postgres"}
