@@ -1,0 +1,232 @@
+# pack-refs with: peeled fully-peeled sorted 
+7da8e5a6df025462eb41fd8b51caa688f1133edf refs/remotes/origin/funbringer/fix-some-warnings
+d7b10f2cea5edd1e625dd4b1f2e57e859008f61f refs/remotes/origin/master
+ca80f647e81235d54ff2a0de0d32ac57676321c9 refs/tags/postgres-derive-v0.4.0
+94115a81b47c7ea767995509ab4dd93563281817 refs/tags/postgres-derive-v0.4.0-alpha.1
+6115071d9d7b91594b236f464860d8c624f943c3 refs/tags/postgres-derive-v0.4.1
+^c5591c810ccba977bbf819b5d290d30e26300a3f
+29cd1c50f644ea8fb579231904a737ea0076dd92 refs/tags/postgres-derive-v0.4.2
+^1d8aa0ad87873429aa2472102bca3365a73f24ce
+abaaf548fc0118e214f1719002d9e173d3f66650 refs/tags/postgres-native-tls-v0.1.0
+4cc18be35b8aa3f77e2eccc4bb5316d90f2a4387 refs/tags/postgres-native-tls-v0.2.0-rc.1
+7413ffb793ccaf0089be22cef70bb4f38af3213c refs/tags/postgres-native-tls-v0.3.0
+ae230fb012b9bb8b6408a52cb6c31b207209147c refs/tags/postgres-native-tls-v0.3.0-alpha.1
+dc2416011a93883461f93ab29771520f3aa94969 refs/tags/postgres-native-tls-v0.3.0-alpha.2
+473562175fc685688b4364d121703ee82c7ab983 refs/tags/postgres-native-tls-v0.4.0
+eeee279277db483148071e6844e2b5da2adcb3cd refs/tags/postgres-native-tls-v0.5.0
+abaaf548fc0118e214f1719002d9e173d3f66650 refs/tags/postgres-openssl-v0.1.0
+6464954e077c24b075413122af3abc88f5570ee5 refs/tags/postgres-openssl-v0.2.0-rc.1
+f3cf1de93e531200741f7066e49644098e85f4b0 refs/tags/postgres-openssl-v0.3.0
+7f7ef7560a4f7a2400c02a3b0d9079f86521b964 refs/tags/postgres-openssl-v0.3.0-alpha.1
+7c29346cd4493d2e532bd5dfb8d5956b594eb129 refs/tags/postgres-openssl-v0.3.0-alpha.2
+ec1c4a5c6533109e42adcf1fa9d5f60cbe1e2ba8 refs/tags/postgres-openssl-v0.4.0
+6e9ee0fa8424f4ebca527c4a5d51575ee9d4e1c4 refs/tags/postgres-openssl-v0.5.0
+0a7df088af04849d47a0d976b6f7ac962c6a1422 refs/tags/postgres-protocol-v0.2.2
+^29cac442dd5cce630a0e039cd906e16de1c1eae2
+a86180cc92e47efbe5845b58534945c19aa1551a refs/tags/postgres-protocol-v0.3.0
+^6cf1eeb4570af63a1c663d7cc9238b0a67e6598b
+c3062b3782742058af080e865c1510be33d52f47 refs/tags/postgres-protocol-v0.3.1
+0ff73e43b50ef842e8c36a8cb3f0c66df1699708 refs/tags/postgres-protocol-v0.3.2
+9385bebefccda77d426a68d13ddb71421a7ebb68 refs/tags/postgres-protocol-v0.4.0
+47d83d57a02c3b96b11ce15688764b0c320c6e93 refs/tags/postgres-protocol-v0.4.1
+1c5ceebe8a6f4fbd8d494e7e145fa53063db46fa refs/tags/postgres-protocol-v0.5.0
+9ebdca23e1d83d128687e83ef5b54052c67c98af refs/tags/postgres-protocol-v0.5.0-alpha.1
+2d083ec1c89fb08010b9712081b6491667641169 refs/tags/postgres-protocol-v0.5.0-alpha.2
+e25987656eea9deed0554489b9fd596ccf699dc0 refs/tags/postgres-protocol-v0.5.1
+90f763b968143c02dfe035fc4f1e8f0835b11349 refs/tags/postgres-protocol-v0.5.2
+3f350680d57a9993ac5306bf52be7f17efe92d58 refs/tags/postgres-protocol-v0.5.3
+06dcebf248fe067d1ef29ef3427561a4248730f9 refs/tags/postgres-protocol-v0.6.0
+a598c52906a432cd0670d8aba60a1dd174484ed8 refs/tags/postgres-protocol-v0.6.1
+349c38b1fe77eae6b27a2ca65d760bff984382e7 refs/tags/postgres-protocol-v0.6.2
+93c986bae195fd794a651ab5eedf9546ae74678c refs/tags/postgres-protocol-v0.6.3
+^630f179892c9030119bf80df97aa05fef2dea525
+9cdc7c77266aaa22c68dc6829ae54171cb469c98 refs/tags/postgres-protocol-v0.6.4
+^da78d4ea065d976bf4e2d711b3718055a63c9f77
+3fae735abf757ed10865ebaf96b65dd4b7ffe6ca refs/tags/postgres-shared-v0.1.0
+^c62bedc4e4d720bb2580ad0afad1beddbf99b56e
+2fe92d18784c4e665577eb8291e9ed232f464738 refs/tags/postgres-shared-v0.1.1
+^89f53786429dc6df0acacdc573ba99f839594afe
+ef3f31d896c0f637c943d490a172be1758aa9b6f refs/tags/postgres-shared-v0.2.0
+^01314c1375fda21d17a22f28436de853993b0121
+4cc6deee9d0482536be06b4ea61fdf8b27fee05e refs/tags/postgres-shared-v0.2.1
+^1672bdd54db37a3b67c1a8b4654a96879ccfe814
+5af7a9947f0dd0c74bee1b35c3f8f74e01b1fde0 refs/tags/postgres-shared-v0.3.0
+^138f89993c00861130bac6f690bcf837b5fef397
+06c1b55f8ce71a3866bf2360ffecd44e4caa2215 refs/tags/postgres-shared-v0.4.0
+e1f31a44935a70bbdeaa0ba05ea3049155793f81 refs/tags/postgres-shared-v0.4.1
+fc0019368aa77373b7a33d090b877cf1e1b5e415 refs/tags/postgres-shared-v0.4.2
+245ccb7babd4688a39334fd0885499b57e65f5fa refs/tags/postgres-types-v0.1.0
+4745cda7b7f7a0837072c44d6c03f91b7d9eccd3 refs/tags/postgres-types-v0.1.0-alpha.1
+de2b78dcefacc9eeafca742c3070ca194960043d refs/tags/postgres-types-v0.1.0-alpha.2
+d8470a75a5844250ef7815e9699c7662533b6dbe refs/tags/postgres-types-v0.1.1
+fe904154df5c68ee7df9c0e9d8be279e935aff81 refs/tags/postgres-types-v0.1.2
+7fd04e7a21cc5ae9832f24a4b28292b40fbcaa8f refs/tags/postgres-types-v0.1.3
+71fc3e74bd9bad23c381a3df370c5f5bb23558fe refs/tags/postgres-types-v0.2.0
+a598c52906a432cd0670d8aba60a1dd174484ed8 refs/tags/postgres-types-v0.2.1
+c7785d0b10bf629b1dbf915d24f370d5e11da4f4 refs/tags/postgres-types-v0.2.2
+cf9e9f16d1824cd091e7dfc86e61ecd6987de10b refs/tags/postgres-types-v0.2.3
+^695067c299e5ada849f294859be705348aecbf21
+f901f40e485b11f305395ea9f6f5f8eedb22638c refs/tags/postgres-v0.13.5
+^298189029fa67a5d419cd2c78376fe03f8f2bbf8
+1bb574a45a923b4dd44e6508dfa75f80fdef40ba refs/tags/postgres-v0.13.6
+^bd2710b9c9527c805bdbd48d56e0597d4a563883
+cb6424d21eae223f279c2ea0933a8524b27d03b9 refs/tags/postgres-v0.14.0
+^5a814210cd92272704a5e38f1be3d0468ca17c2e
+172fe070599fe753364872c932a7448d60fd163c refs/tags/postgres-v0.14.1
+^ccc19ea28f57a16dcd7e836f9c06c231be2dda68
+a7f76f3653b5cdfb06c949937880dcb6273cf50a refs/tags/postgres-v0.14.2
+^3be6bba7a4ca81eab4f8bdd0c8dfa0703541f7e7
+5524e21f9a3bc87f310fc0b5f0fa78363fda7292 refs/tags/postgres-v0.15.0
+1d9c7d4c79078766452440deb058174b1dc63c43 refs/tags/postgres-v0.15.1
+0516cb9d109f9450a0154cc35060b2c4bd02f492 refs/tags/postgres-v0.15.2
+0c8ecc024056a226a4496f8e4e4a24b343f1b894 refs/tags/postgres-v0.16.0-rc.1
+904c951ad69b66126c533ea7d017cde67b8436de refs/tags/postgres-v0.16.0-rc.2
+69412cf7e37a23dab5ccf64c1464200e1826cc03 refs/tags/postgres-v0.17.0
+2a8f7bdd96221a53357490995074797a738599e2 refs/tags/postgres-v0.17.0-alpha.1
+fa3b068da72566e5df9b9a33eeab5b158902516e refs/tags/postgres-v0.17.0-alpha.2
+cc9b8232a858099e11f8b9e8632566f9b6103a81 refs/tags/postgres-v0.17.1
+ff36ce993d748da91cfa305eaf4b71512a31f2be refs/tags/postgres-v0.17.2
+f9ba58967ba2bbbbb6ff9c84a07adae246a8e316 refs/tags/postgres-v0.17.3
+27b36f53e293c4bceba395870056af0dc27b6799 refs/tags/postgres-v0.17.4
+f6620e6a24ac416101a811b89b69cd74e137af51 refs/tags/postgres-v0.17.5
+cc77ad18d5fc6059e565dc99fce5ec674c4138de refs/tags/postgres-v0.18.0
+5e065c36cdcaa8741c712833a947670b46e952c3 refs/tags/postgres-v0.18.1
+de831c3a5384546b0fd6f667dbe7f767fcb6e7a0 refs/tags/postgres-v0.19.0
+2ab49f6c564f73eba1404c060e4ef5520ed6c798 refs/tags/postgres-v0.19.1
+b3082a38ad69e71e432bcea066c17f4c58675a3f refs/tags/postgres-v0.19.2
+^d45461614aca87022c17a2cc26b22325bf161fa5
+0592e24973365963c9aed0fc603cf0ddfc8361f9 refs/tags/postgres-v0.19.3
+^8785773e8e332f665471d79258dcc8f0051ebf27
+16db8d194b0d26c48666cc80cde9981e30455ece refs/tags/rust-0.10
+092453b3b2ef87f8d897b2e332b6a8d490bb8036 refs/tags/rust-0.11
+abd60ef1cfcd389bb6cc2cbe96a8ad99dab342b3 refs/tags/rust-0.12
+2093f3e1ee4e85e5237ef117d1abe79663dbcc17 refs/tags/tokio-postgres-0.5.1
+e434aadf04e565f580d686f6b6f6001265602fc4 refs/tags/tokio-postgres-native-tls-v0.1.0-rc.1
+374fadb816d2f96bc14ff951560136685e00883c refs/tags/tokio-postgres-openssl-v0.1.0-rc.1
+7f85893e5d0aaa67514f2f1082149c4e6da3e9d6 refs/tags/tokio-postgres-v0.1.0
+^90bc787b7592875037923e8d28f5076556fa59a8
+2663bd758d51803ad157e1b286aee97bf2aebcd0 refs/tags/tokio-postgres-v0.1.1
+^814c5797c5b27800a88bab11a578a39f03a16e1b
+7a5ef8a8b917ca48f7b317b3ecdb2a9ff6a37000 refs/tags/tokio-postgres-v0.2.0
+^8f1d0763037486d41c9badbd22e4a6bdb50f8404
+533050801bd9d0518726013ad656329c8076446b refs/tags/tokio-postgres-v0.2.1
+^5685dded4ebaa9b7cc7edb731cd815709a2e16ba
+27a3776937a84276121c60411408949037b996e2 refs/tags/tokio-postgres-v0.2.2
+^413d1db5cde427ed9b2023ee800dd5823005bddf
+fac0f60d0d3c5e4394dda0cdea9c59b62dd9ce48 refs/tags/tokio-postgres-v0.2.3
+^9628c5b89d1732828f8e9dba97009b7d49020c30
+762a7aef7f8e8f7f41c65003ff761bf2da507ad2 refs/tags/tokio-postgres-v0.3.0
+4174eeeecb0d71fa304ca83b1ce26432fd9035e8 refs/tags/tokio-postgres-v0.4.0-rc.1
+4f084e7b647a26dcaa8da5301be93304cffe092f refs/tags/tokio-postgres-v0.4.0-rc.2
+310f0ebfc632f125c93ae7984b7343672a848b5f refs/tags/tokio-postgres-v0.4.0-rc.3
+1f773f08e32a7f2e3820d03586b3db8ccd6a894b refs/tags/tokio-postgres-v0.5.0
+afa466fb256727464c3a2b55cbfe5c971f628d32 refs/tags/tokio-postgres-v0.5.0-alpha.1
+47d97f0d2ef0b8b24f00e44f62fea8be33178b94 refs/tags/tokio-postgres-v0.5.0-alpha.2
+d88bccc27c021fcc5727e563a8ff5ec38f403a49 refs/tags/tokio-postgres-v0.5.2
+72e0dbfcc09774c0b10e1e37a8c3c923e01168f8 refs/tags/tokio-postgres-v0.5.3
+66f5a8bbc58f92b5b048f75db7e036eec646f503 refs/tags/tokio-postgres-v0.5.4
+170c5a5e13230a2c7696362be12476079bc5d282 refs/tags/tokio-postgres-v0.5.5
+12e2f03b53636b9348e07c5d83191a7c7805a0f4 refs/tags/tokio-postgres-v0.6.0
+4fb6fd906f35a4736f50bec65d1e89da55f30a5f refs/tags/tokio-postgres-v0.7.0
+57164c7e59f31be016980e7874fd7b8a4c92d40a refs/tags/tokio-postgres-v0.7.1
+36916bec38968639d3fee6c14123fe44f3a86fcf refs/tags/tokio-postgres-v0.7.2
+8542d078bfcd88dcb92ceae7ec9d17364586f3a2 refs/tags/tokio-postgres-v0.7.3
+0adcf58555fa1a5f42bdab512ea462ca993cad62 refs/tags/tokio-postgres-v0.7.4
+84fa5fa1d007e95e18bef95f01e9a065ccf1e415 refs/tags/tokio-postgres-v0.7.5
+fa0d4390d1e0249ae6fd14bc238a1f227b7f99a1 refs/tags/tokio-postgres-v0.7.6
+^17af0d5b6884839c4d7d4c3fb85347f9f1e3e633
+2aefb6c34caf43b06e7e0bc5eae4260113eb6b93 refs/tags/v0.1.0
+d7cec2c7e5793fc502d77db3cde8853d6ea45506 refs/tags/v0.1.1
+d0a5bd76799e57fe17fe31a311ba158648763d2b refs/tags/v0.1.2
+a55c50a22bd9510691d6e87a9aa9f86ff93792fc refs/tags/v0.1.3
+b7732a1f89ea90a8068cd785eaa92298a537559b refs/tags/v0.10.0
+^ef3de8ae35c647c6bb3e7b2372b46d19c2cf1563
+367f430eae025c7df3ff195e437a4bcbb7b482ca refs/tags/v0.10.1
+^321cc4df3d267917e329bf13e6b715696be7260f
+2b7fd1af06f9dd7458c6ec23d5444ce62f1be070 refs/tags/v0.10.2
+^a402f7d3a64be0a5f13c5d13579eebc27258315c
+3189932639892b525b3e38d901a2cd35ace110bc refs/tags/v0.11.0
+^3d67d521c62767491ff4d28a8ff63c0fb3446646
+31ce4fbddf46ac54ca525ee7138b607e71fc4bae refs/tags/v0.11.1
+^fed121d9215145a0b9a33f3fabd5983605beb5a9
+0111358a83237bbd2969e51eb4df96169efb8a8f refs/tags/v0.11.10
+^30f11af1a2c2666fda5092b319560b0006ce4c09
+0762f1244c3c356a71bbf94506e2aed4da087de8 refs/tags/v0.11.11
+^b4196256414842549143bf41876518a640cf4878
+eb6917facc834662320017665678deded346178e refs/tags/v0.11.12
+^1777f425872167875abc735134989ab644f95186
+90e25f82928384d77dc352a9e340425681b4baa0 refs/tags/v0.11.2
+^7b4c3fc2d9f127a6b8103e8d701f9c4762ec7da0
+7f12644dba342d2e32725a84259ba8ca2a99d5a0 refs/tags/v0.11.3
+^b234cc07edfde44a029f1a65dd31a080c3f24c94
+5c9b365964a104561a155e1a063e092d52e394a2 refs/tags/v0.11.4
+^46913522dc59184b7440eda1cb95ea28508bc475
+fc711ecdf52bfa58dc69e1b6d9f9a6e4e4f748ec refs/tags/v0.11.5
+^08d6c7b7006f5b633cc30226181383bebf2e7f8d
+0e275f3328b66e19f3590b58809e09fc81f3cb77 refs/tags/v0.11.6
+^bc7de37ba7f99ca904d488238a52a6ff0bb1bec1
+4c7e5227fc65ba5e87ea93c6ec80b119fcc3f35b refs/tags/v0.11.7
+^d1c28eeac0bc8d9641db43ad8f6efb94e0fcbbce
+4dab800f87ea7506825c125e7d7e8ce34706106d refs/tags/v0.11.8
+^b437f9a8b77044f6cfaa12d42c7e0b0db9545e40
+06f89b24bbcc85d826dbfc5e768e8b605d683fb5 refs/tags/v0.11.9
+^453cd07955ee9b61fd93e4df95fef440ad4806af
+d3ae1b10635a114ca5dc0aa57f53d845a0b482f8 refs/tags/v0.12.0
+^65293361689fb60c8beff2faac267beb674423fa
+f629be602181cba865b72b9681b8f7159a17f60a refs/tags/v0.13.0
+^69477cd11436a917c38b4f304d209f941d884ceb
+06ada36199126ba7d20100993e51c8a9029eb1c9 refs/tags/v0.13.1
+^9c1068253f5862cf9597c2e95d95ac83e0eee4bc
+39f7a57a580444623bdd2aff064586e595cac31d refs/tags/v0.13.2
+^1e24f48b102cc17bbf5e1076495305c8cc748399
+67ccaeaa0e9e918293b2a51547e9b81359d841fa refs/tags/v0.13.3
+^8e5f28eb70d330335a8d697812be64e8f4c189ba
+7fd61efafa7178666f66089d7811062b298c90cb refs/tags/v0.13.4
+^1006b50295e33f7d8e002a6597d8498f17ad1b00
+82e9d62c0d9058d5b708f9c98e89ca734e36a7be refs/tags/v0.2.0
+e7e9eebaa64ca1d4a86da23573b9d2b3b5eb514a refs/tags/v0.2.1
+27917327db4a776d0994b31f8c69d4d3b919acfc refs/tags/v0.2.2
+9b183959d964af1a1e4b3047224563f08561ef47 refs/tags/v0.2.3
+76e6ecf0e72a3a324a92baa6295803c5de4f38d5 refs/tags/v0.2.4
+ac808cde0426fcabe99ca754ed6a9621c77bc794 refs/tags/v0.3.0
+deeb7042cee30a4ecdd77a71ff047d244aed1f89 refs/tags/v0.4.0
+bb7693fa9667b3b7c6f6c7a86ca6c08cfd2d2d8a refs/tags/v0.4.1
+15bc551bd1ed2c405b4f476db80a9a6ae39a1cd8 refs/tags/v0.4.2
+0768703bdb3880faee39a6aa64307c5160eb3f4e refs/tags/v0.4.3
+eebcfda9a6c918032858ffce085a3f9947cafb6c refs/tags/v0.4.4
+063c9727d5cb4c83b051978a6a13af8c3f9bedd4 refs/tags/v0.4.5
+2160227c8882cd1b2af02894068989d147e5308b refs/tags/v0.4.6
+84a3b977da01dbd73fe52ee1568ad7da7fb853d7 refs/tags/v0.5.0
+05b2a09236878bb04e0d7bc7e925c2c8899cf418 refs/tags/v0.5.1
+d66ee2918d18317a659baf6865caef2b00568325 refs/tags/v0.5.2
+4894487764ac1a5cbd9c72000512e2d10ced1161 refs/tags/v0.5.3
+6d0e4ced56c7660ab758bd42ea17671b53fe58f8 refs/tags/v0.5.4
+aa4eb98435e0b6046dd1bf4cf813981d2629d60f refs/tags/v0.5.5
+6bd753888b85a8c3bcc6196cbd766830608c0f4a refs/tags/v0.5.6
+ab352115a52147782c9d348977b2fa7de09ff822 refs/tags/v0.6.0
+fe6ae0c63a6e5d66d2afb785605b7d89ec47062d refs/tags/v0.6.1
+3c2d8f9aeb286780be3bfd358690e8d2e51cb846 refs/tags/v0.6.2
+c63b86d4786843cb8c62e6cde74dc9fbb9355dbc refs/tags/v0.6.3
+e67b5b3008d5c666c2c51529630cad0ec8fc8033 refs/tags/v0.6.4
+07d41c2cb980a73a74500f5c6955619fa8b1f31b refs/tags/v0.6.5
+0bce7e26a24340a1191063322800dd5673272743 refs/tags/v0.7.0
+9c6f585c8c4fb724975eead4a1ecfa4cec7dc153 refs/tags/v0.7.1
+052e189a695193cc510072026ab758f0a553f524 refs/tags/v0.7.2
+dbe1d307d3dc9ae20fb1f3d2be5fa5b8edbb9597 refs/tags/v0.7.3
+44d47335d31aacaf3f5e9e7ef808e21dc2faf336 refs/tags/v0.7.4
+82ed2dade94937b7bd31500478cce23d29f993f3 refs/tags/v0.7.5
+fd9fb73693f62f40ace411007dbb8a946230eb89 refs/tags/v0.8.0
+d591470eadffd1245f6acb1bd197862790d65a55 refs/tags/v0.8.2
+704d15bece48420d32fe7ec7883226c63beca75c refs/tags/v0.8.3
+15034f9f4b75e04263928aa40e24fef01ffcd272 refs/tags/v0.8.4
+2eea62fed207a87d7f93d8abf03732de096bc62f refs/tags/v0.8.5
+90810f26227f24bdec60f2016fb746fe8560ff73 refs/tags/v0.8.6
+a12fe90ee16308ad8d291df5fcb60fe010fbf1e3 refs/tags/v0.8.7
+7d11a056722548412848c094253b4906e75a2161 refs/tags/v0.8.8
+aae925a449c24ab8e3b88789709ca7f38cfa1ef3 refs/tags/v0.8.9
+b6864b92e9951465dbb7c55a779d521a54ed7535 refs/tags/v0.9.0
+206bb3205234308ba56ba5a5f2001f2975148773 refs/tags/v0.9.2
+d6616ddd39acc7488d5d9b79dfeaca33008afda5 refs/tags/v0.9.3
+1ef2e8b2179d18583d51373c6790ea2e745ef06f refs/tags/v0.9.4
+2893091266ee53850f26e893ce2e87cea74df4b3 refs/tags/v0.9.5
+fc2ae1da545050b8b48aa6da2c7e49e69f230851 refs/tags/v0.9.6
