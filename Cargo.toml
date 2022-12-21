@@ -6,11 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+openssl = "0.10.45"
 postgres = "0.19.4"
 structopt = "0.3.26"
-openssl = "0.10.45"
 postgres-openssl = "0.5.0"
 
 [patch.crates-io]
-postgres-protocol = { path = "rust-postgres/postgres-protocol"}
 tokio-postgres = { path = "rust-postgres/tokio-postgres"}

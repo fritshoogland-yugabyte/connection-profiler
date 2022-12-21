@@ -9,13 +9,13 @@ use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
 struct Opts {
-    /// postgres URL
+    /// postgres URL ("host=<host> port=<port> user=<user> password=<password> [sslmode=<require|prefer|disable>]")
     #[structopt(short, long)]
     url: String,
     /// query
     #[structopt(short, long)]
     query: String,
-    /// query protocol type: simple, extended or prepared
+    /// query protocol type
     #[structopt(short, long, default_value = "simple", possible_values(&["simple", "extended", "prepared"]))]
     protocol: String,
     /// repeat query
@@ -34,16 +34,11 @@ fn main() {
 
     for _nr in 1..=options.repeat_connect
     {
-        /*
-         * Create a database connection connection.
-         */
+        // Create a database connection connection.
         let connection_start = Instant::now();
         let mut connbuilder = SslConnector::builder(SslMethod::tls()).unwrap();
-        //let mut connbuilder = SslConnectorBuilder(SslContext).unwrap();
         connbuilder.set_verify(SslVerifyMode::NONE);
-        //connbuilder.set_verify(postgres::tls::openssl::openssl::ssl::SSL_VERIFY_NONE);
         let connector = MakeTlsConnector::new(connbuilder.build());
-        //let openssl = postgres::tls::openssl::OpenSsl::from(connbuilder.build());
         let mut client = Client::connect(&options.url, connector).unwrap_or_else( |e|
         {
             eprintln!("Error creating connection: {}", e);
@@ -52,9 +47,7 @@ fn main() {
         let connection_elapsed = connection_start.elapsed().as_micros();
         println!("{:40} {:10} us", "create_connection", connection_elapsed);
 
-        /*
-         * Create a prepared statement if protocol is set to prepared.
-         */
+        // Create a prepared statement if protocol is set to prepared.
         let query = if &options.protocol == "prepared"
         {
             let prepare_start = Instant::now();
@@ -80,9 +73,7 @@ fn main() {
             {
                 println!("run nr: {}", inside_nr);
 
-                /*
-                 * Simple query protocol, alias 'Q'.
-                */
+                // Simple query protocol, alias 'Q'.
                 if &options.protocol == "simple"
                 {
                     let simple_query_start = Instant::now();
@@ -95,9 +86,7 @@ fn main() {
                     println!("{:40} {:10} us", "total simple query", simple_query_elapsed);
                 }
 
-                /*
-                 * Extended query protocol, alias 'P', 'B' and 'E'.
-                 */
+                // Extended query protocol, alias 'P', 'B' and 'E'.
                 if &options.protocol == "extended" || &options.protocol == "prepared"
                 {
                     let extended_protocol_query_start = Instant::now();
