@@ -7,7 +7,7 @@ use crate::{query, slice_iter};
 use crate::{Column, Error, Statement};
 use bytes::Bytes;
 use fallible_iterator::FallibleIterator;
-use futures::{pin_mut, TryStreamExt};
+use futures_util::{pin_mut, TryStreamExt};
 use log::debug;
 use postgres_protocol::message::backend::Message;
 use postgres_protocol::message::frontend;
@@ -16,7 +16,7 @@ use std::pin::Pin;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
 
-// FH
+// FRITS
 use std::time::Instant;
 
 const TYPEINFO_QUERY: &str = "\
@@ -68,8 +68,8 @@ pub async fn prepare(
 ) -> Result<Statement, Error> {
     let name = format!("s{}", NEXT_ID.fetch_add(1, Ordering::SeqCst));
 
-    // FH
-    let begin = Instant::now();
+    // FRITS
+    let timer = Instant::now();
 
     let buf = encode(client, &name, query, types)?;
     let mut responses = client.send(RequestMessages::Single(FrontendMessage::Raw(buf)))?;
@@ -107,9 +107,8 @@ pub async fn prepare(
         }
     }
 
-    // FH
-    let end = begin.elapsed().as_micros();
-    println!("{:20} {:10} us", "parse+describe+sync", end);
+    // FRITS
+    println!("{:20} {:10} us", "parse+describe+sync", timer.elapsed().as_micros());
 
     Ok(Statement::new(client, name, parameters, columns))
 }

@@ -224,7 +224,7 @@ mod geo_types_06;
 mod geo_types_07;
 #[cfg(feature = "with-serde_json-1")]
 mod serde_json_1;
-#[cfg(feature = "smol_str-01")]
+#[cfg(feature = "with-smol_str-01")]
 mod smol_str_01;
 #[cfg(feature = "with-time-0_2")]
 mod time_02;
@@ -320,6 +320,8 @@ pub enum Kind {
     Array(Type),
     /// A range type along with the type of its elements.
     Range(Type),
+    /// A multirange type along with the type of its elements.
+    Multirange(Type),
     /// A domain type along with its underlying type.
     Domain(Type),
     /// A composite type along with information about its fields.
@@ -836,7 +838,7 @@ pub trait ToSql: fmt::Debug {
     ) -> Result<IsNull, Box<dyn Error + Sync + Send>>;
 
     /// Specify the encode format
-    fn encode_format(&self) -> Format {
+    fn encode_format(&self, _ty: &Type) -> Format {
         Format::Binary
     }
 }
@@ -844,6 +846,7 @@ pub trait ToSql: fmt::Debug {
 /// Supported Postgres message format types
 ///
 /// Using Text format in a message assumes a Postgres `SERVER_ENCODING` of `UTF8`
+#[derive(Clone, Copy, Debug)]
 pub enum Format {
     /// Text format (UTF-8)
     Text,
@@ -867,6 +870,10 @@ where
         T::accepts(ty)
     }
 
+    fn encode_format(&self, ty: &Type) -> Format {
+        (*self).encode_format(ty)
+    }
+
     to_sql_checked!();
 }
 
@@ -884,6 +891,13 @@ impl<T: ToSql> ToSql for Option<T> {
 
     fn accepts(ty: &Type) -> bool {
         <T as ToSql>::accepts(ty)
+    }
+
+    fn encode_format(&self, ty: &Type) -> Format {
+        match self {
+            Some(ref val) => val.encode_format(ty),
+            None => Format::Binary,
+        }
     }
 
     to_sql_checked!();
@@ -926,7 +940,7 @@ impl<'a, T: ToSql> ToSql for &'a [T] {
 
 impl<'a> ToSql for &'a [u8] {
     fn to_sql(&self, _: &Type, w: &mut BytesMut) -> Result<IsNull, Box<dyn Error + Sync + Send>> {
-        types::bytea_to_sql(*self, w);
+        types::bytea_to_sql(self, w);
         Ok(IsNull::No)
     }
 
@@ -999,10 +1013,10 @@ impl ToSql for Vec<u8> {
 impl<'a> ToSql for &'a str {
     fn to_sql(&self, ty: &Type, w: &mut BytesMut) -> Result<IsNull, Box<dyn Error + Sync + Send>> {
         match *ty {
-            ref ty if ty.name() == "ltree" => types::ltree_to_sql(*self, w),
-            ref ty if ty.name() == "lquery" => types::lquery_to_sql(*self, w),
-            ref ty if ty.name() == "ltxtquery" => types::ltxtquery_to_sql(*self, w),
-            _ => types::text_to_sql(*self, w),
+            ref ty if ty.name() == "ltree" => types::ltree_to_sql(self, w),
+            ref ty if ty.name() == "lquery" => types::lquery_to_sql(self, w),
+            ref ty if ty.name() == "ltxtquery" => types::ltxtquery_to_sql(self, w),
+            _ => types::text_to_sql(self, w),
         }
         Ok(IsNull::No)
     }
