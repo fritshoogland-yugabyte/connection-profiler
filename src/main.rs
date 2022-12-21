@@ -1,4 +1,7 @@
-use postgres::{Client, NoTls};
+//use postgres::{Client, NoTls};
+use postgres::Client;
+use openssl::ssl::{SslConnector, SslMethod, SslVerifyMode};
+use postgres_openssl::MakeTlsConnector;
 use std::process;
 use std::time::Instant;
 use std::io::stdin;
@@ -35,7 +38,13 @@ fn main() {
          * Create a database connection connection.
          */
         let connection_start = Instant::now();
-        let mut client = Client::connect(&options.url, NoTls).unwrap_or_else( |e|
+        let mut connbuilder = SslConnector::builder(SslMethod::tls()).unwrap();
+        //let mut connbuilder = SslConnectorBuilder(SslContext).unwrap();
+        connbuilder.set_verify(SslVerifyMode::NONE);
+        //connbuilder.set_verify(postgres::tls::openssl::openssl::ssl::SSL_VERIFY_NONE);
+        let connector = MakeTlsConnector::new(connbuilder.build());
+        //let openssl = postgres::tls::openssl::OpenSsl::from(connbuilder.build());
+        let mut client = Client::connect(&options.url, connector).unwrap_or_else( |e|
         {
             eprintln!("Error creating connection: {}", e);
             process::exit(1);
