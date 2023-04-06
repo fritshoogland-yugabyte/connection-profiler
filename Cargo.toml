@@ -10,6 +10,8 @@ openssl = "0.10.45"
 postgres = "0.19.4"
 structopt = "0.3.26"
 postgres-openssl = "0.5.0"
+log = "0.4.17"
+env_logger = "0.10.0"
 
 [patch.crates-io]
 tokio-postgres = { path = "rust-postgres/tokio-postgres"}

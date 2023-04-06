@@ -9,14 +9,14 @@ use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
 struct Opts {
-    /// postgres URL ("host=<host> port=<port> user=<user> password=<password> [sslmode=<require|prefer|disable>]")
+    /// postgres URL ("host=<host> port=<port> user=<user> password=<password> [sslmode=<require|prefer|disable>] [dbname=<database>]")
     #[structopt(short, long)]
     url: String,
     /// query
     #[structopt(short, long)]
     query: String,
     /// query protocol type
-    #[structopt(short, long, default_value = "simple", possible_values(&["simple", "extended", "prepared"]))]
+    #[structopt(short, long, default_value = "simple", possible_values(&["simple", "extended", "prepared", "test"]))]
     protocol: String,
     /// repeat query
     #[structopt(short, long, default_value = "1")]
@@ -29,8 +29,13 @@ struct Opts {
 const PAUSE: bool = false;
 
 fn main() {
+    env_logger::init();
 
     let options = Opts::from_args();
+    let mut connection_total = 0;
+    let mut simple_total = 0;
+    let mut prepare_total = 0;
+    let mut extended_total = 0;
 
     for _nr in 1..=options.repeat_connect
     {
@@ -46,6 +51,7 @@ fn main() {
         });
         let connection_elapsed = connection_start.elapsed().as_micros();
         println!("{:40} {:10} us", "create_connection", connection_elapsed);
+        connection_total += connection_elapsed;
 
         // Create a prepared statement if protocol is set to prepared.
         let query = if &options.protocol == "prepared"
@@ -53,6 +59,7 @@ fn main() {
             let prepare_start = Instant::now();
             let query = client.prepare(&options.query).unwrap();
             let prepare_elapsed = prepare_start.elapsed().as_micros();
+            prepare_total += prepare_elapsed;
             println!("{:40} {:10} us", "prepare statement", prepare_elapsed);
             Some(query)
         } else {
@@ -79,6 +86,7 @@ fn main() {
                     let simple_query_start = Instant::now();
                     let result = client.simple_query(&options.query);
                     let simple_query_elapsed = simple_query_start.elapsed().as_micros();
+                    simple_total += simple_query_elapsed;
                     let _ = result.unwrap_or_else(|e| {
                         println!("{}", e);
                         Vec::new()
@@ -99,15 +107,26 @@ fn main() {
                     };
 
                     let extended_protocol_query_elapsed = extended_protocol_query_start.elapsed().as_micros();
+                    extended_total += extended_protocol_query_elapsed;
                     let _ = result.unwrap_or_else(|e| {
                         println!("{}", e);
                         Vec::new()
                     });
                     println!("{:40} {:10} us", "total extended protocol", extended_protocol_query_elapsed);
                 }
+
+                if &options.protocol == "test"
+                {
+                    println!("execute");
+                    let _ = client.execute(&options.query, &[]);
+                }
             }
         }
         client.close().unwrap();
         println!("{}", '='.to_string().repeat(60));
     }
+    println!("Average connection time: {:10}", connection_total/options.repeat_connect as u128);
+    println!("Average prepare    time: {:10}", prepare_total/options.repeat_connect as u128);
+    println!("Average simple     time: {:10}", simple_total/(options.repeat_connect as u128 * options.repeat_sql as u128));
+    println!("Average extended   time: {:10}", extended_total/(options.repeat_connect as u128 * options.repeat_sql as u128));
 }

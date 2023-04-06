@@ -431,7 +431,15 @@ impl Client {
         I::IntoIter: ExactSizeIterator,
     {
         let statement = statement.__convert().into_statement(self).await?;
-        query::execute(self.inner(), statement, params).await
+
+        // FRITS
+        let timer = Instant::now();
+
+        let result = query::execute(self.inner(), statement, params).await?;
+
+        // FRITS
+        println!("{:20} {:10} us", "bind+execute+sync", timer.elapsed().as_micros());
+        Ok(result)
     }
 
     /// Executes a `COPY FROM STDIN` statement, returning a sink used to write the copy data.
