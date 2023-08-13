@@ -118,7 +118,8 @@ fn main() {
                 if &options.protocol == "test"
                 {
                     println!("execute");
-                    let _ = client.execute(&options.query, &[]);
+                    //let _ = client.execute(&options.query, &[]);
+                    client.batch_execute(&options.query).unwrap();
                 }
             }
         }
